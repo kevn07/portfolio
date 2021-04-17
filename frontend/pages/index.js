@@ -2,7 +2,21 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.scss'
 
-export default function Home() {
+import { getStaticData } from '../lib/tempData'
+
+//TO DO: retrieve static description from NOSQLDB
+export async function getStaticProps() {
+  const profileData = getStaticData()
+  console.log(profileData)
+  console.log(profileData.socialMedia)
+  return {
+    props: {
+      profileData
+    }
+  }
+}
+
+export default function Home({ profileData }) {
   return (
     <Layout home>
       <Head>
@@ -13,6 +27,9 @@ export default function Home() {
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        </p>
+        <p>
+          { JSON.stringify(profileData) }
         </p>
       </section>
     </Layout>

@@ -35,16 +35,15 @@ export default function Home({ profileData }) {
         <p>
           { JSON.stringify(profileData) }
         </p>
-        <Link href='https://www.linkedin.com/in/kevin-hehe/'>
+        <Link href={'https://github.com/' + profileData.socialMedia.github}>
           <FontAwesomeIcon icon={['fab', 'github']} />
         </Link>
-        <div>
-          <FontAwesomeIcon icon={['fab', 'instagram']} />
-        </div>
-        <div>
+        <Link href={'https://linkedin.com/in/' + profileData.socialMedia.linkedin}>
           <FontAwesomeIcon icon={['fab', 'linkedin']} />
-        </div>
-        
+        </Link>
+        <Link href={'https://www.instagram.com/' + profileData.socialMedia.instagram}>
+          <FontAwesomeIcon icon={['fab', 'instagram']} />
+        </Link>
       </section>
     </Layout>
   )

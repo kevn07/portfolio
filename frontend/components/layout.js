@@ -4,6 +4,25 @@ import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
+import { db } from '../lib/firebase'
+import { doc, getDoc } from 'firebase/firestore'
+
+export async function getStaticProps() {
+  const docRef = doc(db, "portfolio", "profile")
+  const docSnap = await getDoc(docRef)
+  let profileData = {
+    error: "no profile data"
+  };
+  if (docSnap.exists()) {
+    profileData = docSnap.data()
+  }
+  console.log(profileData)
+  return {
+    props: {
+      profileData
+    }
+  }
+}
 const name = 'Kevin He'
 export const siteTitle = 'Portfolio Site'
 

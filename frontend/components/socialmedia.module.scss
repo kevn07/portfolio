@@ -1,0 +1,8 @@
+.icon {
+  width: 7em;
+  color: #2E845F;
+  &:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+}

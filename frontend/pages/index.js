@@ -30,16 +30,17 @@ export default function Home({ profileData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>{ profileData.introduction }</p>
-        {/* <p>
-          { JSON.stringify(profileData) }
-        </p> */}
-      </section>
       <section>
         <SocialMediaBar socialMedia={profileData.socialMedia}>
         </SocialMediaBar>
       </section>
+      <section>
+        <p style={{textAlign: "center"}}>{ profileData.introduction }</p>
+        {/* <p>
+          { JSON.stringify(profileData) }
+        </p> */}
+      </section>
+      
     </Layout>
   )
 }

@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SocialMediaBar({ ...props }) {
   return (      
-    <div>
-      <a href={'https://github.com/' + props.socialMedia.github}>
-        <FontAwesomeIcon icon={['fab', 'github']} className={socialMediaStyles.icon}/>
+    <div className={socialMediaStyles.container}>
+      <a href={'https://github.com/' + props.socialMedia.github} className={socialMediaStyles.iconContainer}>
+        <FontAwesomeIcon icon={['fab', 'github']}  className={socialMediaStyles.icon}/>
       </a> 
-      <a href={'https://linkedin.com/in/' + props.socialMedia.linkedin}>
+      <a href={'https://linkedin.com/in/' + props.socialMedia.linkedin} className={socialMediaStyles.iconContainer}>
         <FontAwesomeIcon icon={['fab', 'linkedin']} className={socialMediaStyles.icon}/>
       </a>
-      <a href={'https://www.instagram.com/' + props.socialMedia.instagram}>
-        <FontAwesomeIcon icon={['fab', 'instagram']} className={socialMediaStyles.icon} />
+      <a href={'https://www.instagram.com/' + props.socialMedia.instagram} className={socialMediaStyles.iconContainer}>
+        <FontAwesomeIcon icon={['fab', 'instagram']} className={socialMediaStyles.icon}/>
       </a>
     </div>
   )

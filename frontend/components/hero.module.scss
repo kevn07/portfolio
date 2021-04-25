@@ -1,17 +1,17 @@
 .heroContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  min-height: 50vh;
-  padding: 0;
+  padding: 5em 0;
+  padding-bottom: 15em;
+  grid-template-areas: 
+    "image description description"
+    "social social social";
+  min-height: 100vh;
   align-items: center;
+  background-clip: content-box;
   h1 {
     margin-bottom: 0;
   }
-}
-
-.intro {
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .image {
@@ -32,4 +32,12 @@
     cursor: pointer;
     opacity: 0.3;
   }
+}
+
+.descriptionContainer {
+  grid-area: description;
+}
+
+.socialContainer {
+  grid-area: social;
 }

@@ -5,7 +5,7 @@ export default function About ({...props}) {
   return (
     <div id="about" className={aboutStyles.aboutContainer}>
       <div>
-        <FontAwesomeIcon icon={['fas', 'address-card']} className={utilStyles.icon}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={['fas', 'user']} className={utilStyles.icon}></FontAwesomeIcon>
         <h1>
           About Me
         </h1>

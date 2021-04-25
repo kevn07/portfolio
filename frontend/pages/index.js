@@ -36,14 +36,15 @@ export default function Home({ profileData }) {
       </Head>
       <Hero 
         name={profileData.firstName + " " + profileData.lastName}
-        intro={profileData.introduction }
+        intro={profileData.introduction}
+        social={profileData.social}
       >
       </Hero>
       {/* <section>
         <p style={{textAlign: "center"}}>{ profileData.introduction }</p>
       </section> */}
-      <Social social={profileData.social}>
-      </Social>
+      {/* <Social social={profileData.social}>
+      </Social> */}
       <About about={profileData.about}>
       </About>
       <footer>

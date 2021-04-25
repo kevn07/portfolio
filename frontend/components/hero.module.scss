@@ -3,12 +3,33 @@
   grid-template-columns: 1fr 2fr;
   min-height: 50vh;
   padding: 0;
+  align-items: center;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.intro {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image {
+  border-radius: 9999px;
 }
 
 .imageContainer {
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+  width: 170px;
+  border: #2E845F solid 1px;
 
-}
-
-.descriptionContainer {
-
+  transition: all 200ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
 }

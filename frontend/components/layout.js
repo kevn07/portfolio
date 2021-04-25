@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
+import Nav from './nav'
 
 const name = 'Kevin He'
 export const siteTitle = 'Portfolio Site'
@@ -59,7 +60,9 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )} */}
-        this is a header
+        <Nav>
+
+        </Nav>
       </header>
       <main>{children}</main>
       {/* {!home && (

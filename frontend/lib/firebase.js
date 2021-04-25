@@ -2,8 +2,7 @@
 // Initialize Cloud Firestore through Firebase
 import * as firebase from 'firebase/app'
 import * as firestore from 'firebase/firestore'
-import { config } from './config'
-const firebaseConfig = config.firebaseConfig
+import { firebaseConfig } from './config'
 
 if (!firebase.getApps().length) {
   firebase.initializeApp(firebaseConfig);

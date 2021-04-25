@@ -8,6 +8,7 @@ import { doc, getDoc} from 'firebase/firestore'
 
 import Social from '../components/social';
 import Hero from '../components/hero';
+import About from '../components/about';
 
 export async function getStaticProps() {
   const docRef = doc(db, "portfolio", "profile")
@@ -43,6 +44,8 @@ export default function Home({ profileData }) {
       </section> */}
       <Social social={profileData.social}>
       </Social>
+      <About about={profileData.about}>
+      </About>
       <footer>
         
       </footer>

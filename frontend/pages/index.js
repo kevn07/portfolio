@@ -6,7 +6,8 @@ import utilStyles from '../styles/utils.module.scss'
 import { db } from '../lib/firebase'
 import { doc, getDoc} from 'firebase/firestore'
 
-import SocialMediaBar from '../components/socialMedia';
+import Social from '../components/social';
+import Hero from '../components/hero';
 
 export async function getStaticProps() {
   const docRef = doc(db, "portfolio", "profile")
@@ -14,9 +15,11 @@ export async function getStaticProps() {
   let profileData = {
     error: "no profile data"
   };
+  
   if (docSnap.exists()) {
     profileData = docSnap.data()
   }
+  console.log(profileData)
   return {
     props: {
       profileData
@@ -30,17 +33,19 @@ export default function Home({ profileData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <SocialMediaBar socialMedia={profileData.socialMedia}>
-        </SocialMediaBar>
-      </section>
-      <section>
+      <Hero 
+        name={profileData.firstName + " " + profileData.lastName}
+        intro={profileData.introduction }
+      >
+      </Hero>
+      {/* <section>
         <p style={{textAlign: "center"}}>{ profileData.introduction }</p>
-        {/* <p>
-          { JSON.stringify(profileData) }
-        </p> */}
-      </section>
-      
+      </section> */}
+      <Social social={profileData.social}>
+      </Social>
+      <footer>
+        
+      </footer>
     </Layout>
   )
 }

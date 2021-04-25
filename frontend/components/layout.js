@@ -4,25 +4,6 @@ import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
-import { db } from '../lib/firebase'
-import { doc, getDoc } from 'firebase/firestore'
-
-// export async function getStaticProps() {
-//   const docRef = doc(db, "portfolio", "profile")
-//   const docSnap = await getDoc(docRef)
-//   let profileData = {
-//     error: "no profile data"
-//   };
-//   if (docSnap.exists()) {
-//     profileData = docSnap.data()
-//   }
-//   console.log(profileData)
-//   return {
-//     props: {
-//       profileData
-//     }
-//   }
-// }
 const name = 'Kevin He'
 export const siteTitle = 'Portfolio Site'
 
@@ -45,12 +26,12 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {/* {home ? (
           <>
             <Image
               priority
               src="/images/monke.jpg"
-              className={utilStyles.borderCircle}
+              className={utilStyles.borderSquare}
               height={144}
               width={144}
               alt={name}
@@ -64,7 +45,7 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/monke.jpg"
-                  className={utilStyles.borderCircle}
+                  className={utilStyles.borderSquare}
                   height={108}
                   width={108}
                   alt={name}
@@ -77,16 +58,17 @@ export default function Layout({ children, home }) {
               </Link>
             </h2>
           </>
-        )}
+        )} */}
+        this is a header
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
+      )} */}
     </div>
   )
 }

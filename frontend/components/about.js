@@ -1,4 +1,4 @@
-import aboutStyles from './about.module.scss'
+import aboutStyles from '../styles/about.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import utilStyles from '../styles/utils.module.scss'
 export default function About ({...props}) {

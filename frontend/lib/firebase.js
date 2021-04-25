@@ -12,7 +12,3 @@ if (!firebase.getApps().length) {
 
 export const db = firestore.getFirestore()
 
-// export const querySnapshot = await firestore.getDocs(firestore.collection(db, "portfolio"));
-// querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ${doc.data()}`);
-// });

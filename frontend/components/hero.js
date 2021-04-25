@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import utilStyles from '../styles/utils.module.scss'
-import heroStyles from './hero.module.scss'
+import heroStyles from '../styles/hero.module.scss'
 import Social from './social'
 import Link from 'next/link'
 export default function Hero ({...props}) {

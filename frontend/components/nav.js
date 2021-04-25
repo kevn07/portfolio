@@ -1,13 +1,13 @@
-import navStyles from './nav.module.scss'
+import navStyles from '../styles/nav.module.scss'
 import { navLinks } from '../lib/config'
 import Link from 'next/link'
 export default function Nav() {
   return (
     <div className={navStyles.navContainer}>
     {
-      navLinks.map(({name, url}) => (
-          <Link href={url}>
-              {name}
+      navLinks.map((obj) => (
+          <Link href={obj.url}>
+              {obj.name}
           </Link>
       ))
     }

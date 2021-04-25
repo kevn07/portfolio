@@ -1,11 +1,16 @@
 import aboutStyles from './about.module.scss'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import utilStyles from '../styles/utils.module.scss'
 export default function About ({...props}) {
   return (
     <div id="about" className={aboutStyles.aboutContainer}>
-      <h1>
-        About Me
-      </h1>
+      <div>
+        <FontAwesomeIcon icon={['fas', 'address-card']} className={utilStyles.icon}></FontAwesomeIcon>
+        <h1>
+          About Me
+        </h1>
+      </div>
+      
       <p>
         {props.about}
       </p>

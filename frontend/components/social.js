@@ -1,6 +1,6 @@
 import socialStyles from './social.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import utilStyles from '../styles/utils.module.scss'
+
 export default function Social({ ...props }) {
   return (
     <div className={socialStyles.container}>

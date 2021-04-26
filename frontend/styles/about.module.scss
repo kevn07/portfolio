@@ -1,8 +1,21 @@
 .aboutContainer {
   min-height: 50vh;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  column-gap: 2em;
 }
 
-.aboutContent {
-  display: grid;
-  padding: 2.5em;
+.aboutDescription {
+  padding: 2.5em 0;
+}
+
+.aboutImage {
+  object-fit: cover;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.heading {
+  border-bottom: #2E845F solid 1px;
 }

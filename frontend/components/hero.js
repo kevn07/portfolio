@@ -13,8 +13,8 @@ export default function Hero ({...props}) {
                   priority
                   src="/images/monke.jpg"
                   className={heroStyles.image}
-                  height={144}
-                  width={144}
+                  height={150}
+                  width={150}
                   alt={props.name}
                 />
             </Link>

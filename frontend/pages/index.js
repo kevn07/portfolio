@@ -1,12 +1,9 @@
 import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.scss'
 
 import { db } from '../lib/firebase'
 import { doc, getDoc} from 'firebase/firestore'
-
-import Social from '../components/social';
 import Hero from '../components/hero';
 import About from '../components/about';
 
@@ -20,7 +17,6 @@ export async function getStaticProps() {
   if (docSnap.exists()) {
     profileData = docSnap.data()
   }
-  console.log(profileData)
   return {
     props: {
       profileData

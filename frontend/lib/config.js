@@ -17,5 +17,13 @@ export const navLinks = [
   {
     name: 'experience',
     url: '/#experience'
-  }
+  },
+  {
+    name: 'contact',
+    url: '/#contact'
+  },
+  {
+    name: 'resume',
+    url: '/#resume'
+  },
 ]

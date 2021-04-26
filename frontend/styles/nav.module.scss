@@ -1,10 +1,7 @@
 .navContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  // align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  border-bottom: #2E845F solid 1px;
 }
-
-// .navItem {
-  
-// }

@@ -1,4 +1,8 @@
 .aboutContainer {
   min-height: 50vh;
-  border: red solid 1px;
+}
+
+.aboutContent {
+  display: grid;
+  padding: 2.5em;
 }

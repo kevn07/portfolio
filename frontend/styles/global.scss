@@ -18,12 +18,13 @@ p {
 }
 
 a {
-  color: #0070f3;
+  color: #5D5D5D;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    color: #2E845F;
+  }
 }
 
 img {

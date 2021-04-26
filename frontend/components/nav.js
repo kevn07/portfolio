@@ -6,9 +6,11 @@ export default function Nav() {
     <div className={navStyles.navContainer}>
     {
       navLinks.map((obj) => (
+        <span>
           <Link href={obj.url}>
               {obj.name}
           </Link>
+        </span>
       ))
     }
     </div>

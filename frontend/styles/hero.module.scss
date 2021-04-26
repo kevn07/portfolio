@@ -23,10 +23,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   height: 170px;
   width: 170px;
   border: #2E845F solid 1px;
-
   transition: all 200ms ease-in-out;
   &:hover {
     cursor: pointer;
@@ -36,6 +36,7 @@
 
 .descriptionContainer {
   grid-area: description;
+  padding: 0 auto;
 }
 
 .socialContainer {

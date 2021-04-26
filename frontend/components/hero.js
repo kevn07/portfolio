@@ -7,7 +7,6 @@ import Link from 'next/link'
 export default function Hero ({...props}) {
   return (
     <div className={heroStyles.heroContainer}>
-        <section>
           <div className={heroStyles.imageContainer}>
             <Link href="/#about">
               <Image
@@ -19,9 +18,7 @@ export default function Hero ({...props}) {
                   alt={props.name}
                 />
             </Link>
-            
           </div>
-        </section>
         <div className={heroStyles.descriptionContainer}>
           <h1 className={utilStyles.heading2Xl}>{ props.name }</h1>
           <div className={heroStyles.intro} style={{fontSize: "0.75rem"}}>

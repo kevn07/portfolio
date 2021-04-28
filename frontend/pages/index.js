@@ -1,12 +1,9 @@
-import Head from 'next/head'
-
-import Layout, { siteTitle } from '../components/layout'
-
 import { db } from '../lib/firebase'
 import { doc, getDoc} from 'firebase/firestore'
 import Hero from '../components/hero';
 import About from '../components/about';
 import Experience from '../components/experience'
+import Layout from '../components/layout'
 
 export async function getStaticProps() {
   const docRef = doc(db, "portfolio", "profile")
@@ -28,27 +25,14 @@ export async function getStaticProps() {
 export default function Home({ profileData }) {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <Hero 
         name={profileData.firstName + " " + profileData.lastName}
         intro={profileData.introduction}
         social={profileData.social}
       >
       </Hero>
-      {/* <section>
-        <p style={{textAlign: "center"}}>{ profileData.introduction }</p>
-      </section> */}
-      {/* <Social social={profileData.social}>
-      </Social> */}
-      <About about={profileData.about}>
-      </About>
-      <Experience>
-      </Experience>
-      <footer>
-        
-      </footer>
+      <About about={profileData.about}></About>
+      <Experience></Experience>
     </Layout>
   )
 }

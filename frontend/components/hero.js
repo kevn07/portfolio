@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.scss'
 import heroStyles from '../styles/hero.module.scss'
 import Social from './social'
 import Link from 'next/link'
+
+
 export default function Hero ({...props}) {
   return (
     <div className={heroStyles.heroContainer}>
@@ -20,7 +22,8 @@ export default function Hero ({...props}) {
             </Link>
           </div>
         <div className={heroStyles.descriptionContainer}>
-          <h1 className={utilStyles.heading2Xl}>{ props.name }</h1>
+          <h1 className={utilStyles.heading2Xl}
+          >{ props.name }</h1>
           <div className={heroStyles.intro} style={{fontSize: "0.75rem"}}>
             <p>
             {props.intro}

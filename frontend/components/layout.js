@@ -2,10 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/layout.module.scss'
 import Nav from './nav'
 
-const name = 'Kevin He'
 export const siteTitle = 'Portfolio Site'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
+
   return (
     <div className={styles.container}>
       <Head>

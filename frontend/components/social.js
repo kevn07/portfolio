@@ -6,7 +6,7 @@ export default function Social({ ...props }) {
     <div className={socialStyles.container}>
       {
         props.social.map((social) =>
-          <a href={social.url} className={socialStyles.iconContainer} target="_blank" rel="noopener noreferrer">
+          <a href={social.url} key={social.name} className={socialStyles.iconContainer} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={['fab', social.name]}  className={socialStyles.icon}/>
           </a> 
         )

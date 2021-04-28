@@ -4,12 +4,33 @@ import utilStyles from '../styles/utils.module.scss'
 import heroStyles from '../styles/hero.module.scss'
 import Social from './social'
 import Link from 'next/link'
-
-
+import { CSSTransition } from 'react-transition-group';
+import fadeStyles from '../styles/fade.module.scss'
+import { useState, useEffect } from 'react'
 export default function Hero ({...props}) {
+  const [isMounted, setIsMounted] = useState(false);
+  console.log(isMounted)
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsMounted(true), 0);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className={heroStyles.heroContainer}>
-          <div className={heroStyles.imageContainer}>
+    <div className={heroStyles.container}>
+        {/* <CSSTransition in={inProp} timeout={2000} classNames={fadeStyles}>
+          <div>
+            {"I'll receive my-node-* classes"}
+          </div>
+        </CSSTransition> */}
+        {/* <button type="button" onClick={() => setInProp(!inProp)}>
+          Click to Enter
+        </button> */}
+        <CSSTransition in={isMounted} timeout={5000} classNames={fadeStyles}>
+          <div>
+              hello world
+          </div>
+          {/* <div className={heroStyles.imageContainer}>
+          
             <Link href="/#about">
               <Image
                   priority
@@ -20,7 +41,10 @@ export default function Hero ({...props}) {
                   alt={props.name}
                 />
             </Link>
-          </div>
+            
+          
+        </div> */}
+        </CSSTransition>
         <div className={heroStyles.descriptionContainer}>
           <h1 className={utilStyles.heading2Xl}
           >{ props.name }</h1>

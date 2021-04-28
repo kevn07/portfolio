@@ -1,4 +1,4 @@
-.heroContainer {
+.container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 5em 0;
@@ -19,6 +19,7 @@
 }
 
 .imageContainer {
+  opacity: 1;
   border-radius: 9999px;
   display: flex;
   justify-content: center;

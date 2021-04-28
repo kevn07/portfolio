@@ -3,7 +3,7 @@ import utilStyles from '../styles/utils.module.scss'
 import Image from 'next/image'
 export default function About ({...props}) {
   return (
-    <div id="about" className={aboutStyles.aboutContainer}>
+    <div id="about" className={aboutStyles.container}>
       <div className={aboutStyles.aboutDescription}>    
         <h2 className={`${aboutStyles.heading} ${utilStyles.headingLg}`}>
           About Me

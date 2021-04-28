@@ -1,10 +1,19 @@
 import Head from 'next/head'
 import styles from '../styles/layout.module.scss'
 import Nav from './nav'
-
+import { useState, useEffect } from 'react'
 export const siteTitle = 'Portfolio Site'
 
-export default function Layout({ children }) {
+export default function Layout({ children, home }) {
+  const isHome = home;
+  const [isLoading, setIsLoading] = useState(isHome);
+  console.log(isLoading)
+  console.log(isHome)
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+  }, [isLoading]);
 
   return (
     <div className={styles.container}>
@@ -23,10 +32,22 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        <Nav></Nav>
-      </header>
-      <main>{children}</main>
+
+      
+      {isLoading && isHome ? (
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100vh"
+            }}>
+              <Nav className={styles.header}></Nav>
+              <main>{children}</main>
+            </div>
+          ) : (
+            <div>
+              loading..
+            </div>
+          )}
     </div>
   )
 }

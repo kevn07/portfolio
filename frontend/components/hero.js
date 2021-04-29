@@ -4,47 +4,28 @@ import utilStyles from '../styles/utils.module.scss'
 import heroStyles from '../styles/hero.module.scss'
 import Social from './social'
 import Link from 'next/link'
-import { CSSTransition } from 'react-transition-group';
-import fadeStyles from '../styles/fade.module.scss'
-import { useState, useEffect } from 'react'
-export default function Hero ({...props}) {
-  const [isMounted, setIsMounted] = useState(false);
-  console.log(isMounted)
-  useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 0);
-    return () => clearTimeout(timeout);
-  }, []);
+import { CSSTransition, TransitionGroup} from 'react-transition-group';
+import fadeUp from '../styles/transitions/fadeup.module.scss'
 
+export default function Hero ({...props}) {
   return (
+    <TransitionGroup>
+    <CSSTransition in={true} appear={true} timeout={1000} classNames={fadeUp}>
     <div className={heroStyles.container}>
-        {/* <CSSTransition in={inProp} timeout={2000} classNames={fadeStyles}>
-          <div>
-            {"I'll receive my-node-* classes"}
-          </div>
-        </CSSTransition> */}
-        {/* <button type="button" onClick={() => setInProp(!inProp)}>
-          Click to Enter
-        </button> */}
-        <CSSTransition in={isMounted} timeout={5000} classNames={fadeStyles}>
-          <div>
-              hello world
-          </div>
-          {/* <div className={heroStyles.imageContainer}>
-          
-            <Link href="/#about">
-              <Image
-                  priority
-                  src="/images/monke.jpg"
-                  className={heroStyles.image}
-                  height={150}
-                  width={150}
-                  alt={props.name}
-                />
-            </Link>
-            
-          
-        </div> */}
-        </CSSTransition>
+            <div className={heroStyles.imageContainer}>
+              <Link href="/#about">
+                <Image
+                    priority
+                    src="/images/monke.jpg"
+                    className={heroStyles.image}
+                    height={150}
+                    width={150}
+                    alt={props.name}
+                  />
+              </Link>
+            </div>
+
+
         <div className={heroStyles.descriptionContainer}>
           <h1 className={utilStyles.heading2Xl}
           >{ props.name }</h1>
@@ -59,6 +40,8 @@ export default function Hero ({...props}) {
           </Social>
         </section>
     </div>
+    </CSSTransition>
+  </TransitionGroup>
 
   )
 }

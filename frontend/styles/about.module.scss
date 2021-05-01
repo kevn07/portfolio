@@ -1,18 +1,35 @@
 .container {
   min-height: 50vh;
   display: grid;
-  grid-template-columns: 4fr 3fr;
-  column-gap: 2em;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 5px;
 }
 
-.aboutDescription {
+.aboutContent {
+  position: relative;
+  grid-column: 1 / 8;
+  grid-row: 1;
+  z-index: 2;
+  background-color: transparent;
   padding: 2.5em 0;
 }
 
+.aboutDescription {
+  background-color: lightgrey;
+  padding: 1.5em;
+  border-radius: 10px;
+}
+
 .aboutImage {
+  align-self: center;
+  grid-column: 4 / 13;
+  grid-row: 1;
+  z-index: 1;
   object-fit: cover;
-  width: 100%;
-  margin: 0 auto;
+  width: auto;
+}
+
+.img {
   border-radius: 10px;
 }
 

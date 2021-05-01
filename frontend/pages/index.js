@@ -15,7 +15,6 @@ export async function getStaticProps() {
   if (docSnap.exists()) {
     profileData = docSnap.data()
   }
-  console.log(profileData.experience[0].position)
   return {
     props: {
       profileData

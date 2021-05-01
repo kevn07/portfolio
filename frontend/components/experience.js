@@ -7,11 +7,34 @@ export default function Experience({...props}) {
         <h2 className={`${utilStyles.headingLg}`}>
           Experience
         </h2>
-        <p>
-          
-        </p>
+          {
+            props.experience.map((obj) => (
+              <section key={obj.company}>
+                  <h3 >{obj.company}</h3>
+                  {
+                    obj.position.map((position) => (
+                      <section key={position.name}>
+                        <p>
+                          {position.name}
+                          <br/>
+                          {position.startDate + " - " + position.endDate}
+                        </p>
+                        <ul>
+                          {position.description.map((responsibilies, index) => (
+                            <li key={index}>
+                              { responsibilies }
+                            </li>
+                          ))}
+                        </ul>
+                        <hr/>
+                      </section>
+                      
+                    ))
+                  }
+              </section>
+            ))
+          }
       </div>
     </div>
-
   )
 }

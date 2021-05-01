@@ -15,6 +15,7 @@ export async function getStaticProps() {
   if (docSnap.exists()) {
     profileData = docSnap.data()
   }
+  console.log(profileData.experience[0].position)
   return {
     props: {
       profileData
@@ -31,8 +32,8 @@ export default function Home({ profileData }) {
         social={profileData.social}
       >
       </Hero>
-      <About about={profileData.about}></About>
-      <Experience></Experience>
+      <About></About>
+      <Experience experience={profileData.experience}></Experience>
     </Layout>
   )
 }

@@ -10,7 +10,7 @@ export default function About ({...props}) {
         </h2>
         <p>
           I'm Kevin! A software engineer from Australia 🇦🇺. I very much enjoy learning to build things not just in tech but everything! It's awesome to see something come together from it's initial components. 
-          <br/>My primary focus is to develop technical solutions that makes life easier for not just the end-user but everyone involved which encompasses learning alot!
+          <br/><br/>My primary focus is to develop technical solutions that makes life easier for not just the end-user but everyone involved which encompasses learning alot!
         </p>
       </div>
       <Image

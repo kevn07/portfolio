@@ -12,11 +12,12 @@ Personal Profile Site to learn some React NextJS.
 - [x] Setup NextJS & Frontend project structure
 - [x] Set up environment variables 
 - [ ] Clean up & Extend Frontend & CSS
-- [ ] Pre/Post Rendering Animations
-- [ ] Navigation Component
+- [x] Pre/Post Rendering Animations
+- [x] Navigation Component
 - [x] Hero Component
-- [ ] About Me Component
-- [ ] Work Experience Component
+- [x] About Me Component
+- [x] Work Experience Component
+- [x] Smooth Scrolling
 - [ ] Showcase Component
 - [ ] Resume Download Component
 - [ ] Footer Component

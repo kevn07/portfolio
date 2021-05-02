@@ -19,6 +19,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-transition-group": "^4.4.1",
-    "sass": "^1.32.10"
+    "sass": "^1.32.10",
+    "scrollreveal": "^4.0.7"
   }
 }

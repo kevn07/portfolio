@@ -1,0 +1,11 @@
+.appear {
+  opacity: 0.01;
+  transform: translateX(20px);
+  transition: opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.appearActive {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}

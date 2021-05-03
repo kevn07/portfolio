@@ -31,7 +31,7 @@ export default function Home({ profileData }) {
         social={profileData.social}
       >
       </Hero>
-      <About></About>
+      <About skills={profileData.skills}></About>
       <Experience experience={profileData.experience}></Experience>
     </Layout>
   )

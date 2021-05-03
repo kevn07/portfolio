@@ -31,7 +31,7 @@ export default function Hero ({...props}) {
           >{ props.name }</h1>
           <div className={heroStyles.intro} style={{fontSize: "0.75rem"}}>
             <p>
-            {props.intro}
+              {props.intro}
             </p>
           </div>
         </div>

@@ -1,7 +1,10 @@
+@import "variables";
+
 .navContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  border-bottom: #2E845F solid 1px;
+  padding-top: 2.5em;
+  border-bottom: $green solid 1px;
 }

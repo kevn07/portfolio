@@ -12,12 +12,11 @@ export default function About ({...props}) {
             <p className={aboutStyles.aboutDescription}>
               <b style={{fontSize: 16}}>Hello!</b>
               <br/>
-              <br/>
               I'm Kevin! A software engineer from Australia 🇦🇺. Although most of my time is spent building software from websites to microservices, I enjoy learning to build all kind of things (my youtube history is a testament to that)! It's awesome to see something come together from it's initial components. 
               <br/><br/>My primary focus is to develop technical solutions that makes life easier for not just the end-user but everyone involved which encompasses learning alot!
             </p>
             <p className={aboutStyles.skillsDescription}>
-              <b style={{fontSize: 16}}>Tech I Work With!</b>
+              <b style={{fontSize: 16}}>Some Tech I Work With!</b>
               <br/>
               <ul>
                 {
